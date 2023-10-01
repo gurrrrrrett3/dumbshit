@@ -40,7 +40,10 @@ if (mode == "upload") {
   });
 } else if (mode == "download") {
   const img = document.getElementById("dumbshit") as HTMLImageElement;
+  const link = document.getElementById("link") as HTMLHeadingElement;
+
   img.removeAttribute("hidden");
+  link.removeAttribute("hidden");
 
   socket.on("url-send", (url: string) => {
     const img = document.getElementById("dumbshit") as HTMLImageElement;

@@ -49,3 +49,10 @@ input[type="text"] {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
+h2 {
+ position: absolute;
+ left: 1rem;
+ bottom: 1rem;
+ font-size: 3rem;
+}
