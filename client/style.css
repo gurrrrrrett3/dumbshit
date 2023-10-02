@@ -20,8 +20,8 @@ body {
 }
 
 img {
-  height: 100vh;
-  width: auto;
+  height: auto;
+  width: 90vw;
   position: absolute;
 }
 
