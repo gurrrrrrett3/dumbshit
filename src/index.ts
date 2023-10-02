@@ -7,7 +7,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 
-let currentUrl: string = "https://media.discordapp.net/attachments/1157910592749846599/1157918483313594388/20211004_142225.png?ex=651a5b1f&is=6519099f&hm=01bc56739cc919f5a12598d99881b7cf9c47f3719340fc06db91ac4712635187&=";
+let currentUrl: string = "https://media.discordapp.net/attachments/1114694800042623007/1158229199023259689/image.png?ex=651b7c7f&is=651a2aff&hm=eb6d69c909e559173a9636d0a333b59f6d816ef3e5f96138fdfa0bc7acbf0b62&=&width=1158&height=900";
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/dist/client/index.html"));
