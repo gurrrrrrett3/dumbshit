@@ -50,11 +50,11 @@ if (mode == "upload") {
     img.src = url;
 
     if (img.width > img.height) {
-      img.style.width = "100%";
+      img.style.width = "90%";
       img.style.height = "auto";
     } else {
       img.style.width = "auto";
-      img.style.height = "100%";
+      img.style.height = "90%";
     }
   });
 }
