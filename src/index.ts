@@ -27,31 +27,12 @@ app.use("/client", express.static("client/dist/client/"));
 
 io.on("connection", (socket) => {
   console.log("Connected to server");
-
-  if (!sockets[socket.id]) {
-    sockets[socket.id] = {
-      lastUrl: Date.now(),
-      requests: 1,
-      uptime: 0,
-    };
-  }
-
+  
   socket.on("disconnect", () => {
     console.log("Disconnected from server");
   });
 
   socket.on("url", (url: string) => {
-    if (Date.now() - sockets[socket.id].lastUrl < 10000) {
-      sockets[socket.id].requests++;
-    } else {
-      sockets[socket.id].requests = 1;
-    }
-
-    if (sockets[socket.id].requests > 10) {
-      socket.emit("error", "Too many requests");
-      console.log(`Rate limited ${socket.id}`);
-      return;
-    }
 
     console.log(`URL received: ${url}`);
     io.emit("url-send", url);
